@@ -1,0 +1,40 @@
+quizapp/
+├── quizapp/                   # Main Django project folder
+│   ├── __init__.py            # Indicates that this folder is a Python package
+│   ├── settings.py            # Project settings (database, middleware, installed apps, etc.)
+│   ├── urls.py                # Project-level URL configurations
+│   ├── asgi.py                # ASGI configuration (for async support)
+│   ├── wsgi.py                # WSGI configuration (for production deployment)
+│   └── manage.py              # Django management script
+│
+├── quiz/                      # Quiz application folder
+│   ├── migrations/            # Folder for database migrations
+│   │   ├── __init__.py        # Empty init file
+│   │   ├── 0001_initial.py    # Initial migration for quiz models
+│   │   ├── 0002_add_quiz_questions.py  # Migration to populate questions
+│   │   └── ...                # Additional migration files (if any)
+│   ├── __init__.py            # Indicates this is a Python package
+│   ├── admin.py               # Django admin interface configurations
+│   ├── apps.py                # App configuration
+│   ├── models.py              # Database models for Questions, Options, and Results
+│   ├── serializers.py         # Serializers for Django REST framework
+│   ├── urls.py                # App-specific URL routing for quiz views and API
+│   ├── views.py               # App logic and API endpoints
+│   ├── templates/             # HTML templates folder
+│   │   ├── quiz/              # Specific folder for quiz-related templates
+│   │   │   ├── base.html      # Base HTML template (with common layout)
+│   │   │   ├── quiz.html      # Template to display the quiz
+│   │   │   ├── signup.html    # Signup page template
+│   │   │   ├── login.html     # Login page template
+│   │   └── ...                # Additional templates if needed
+│   └── static/                # Static files (CSS, JS, images)
+│       ├── css/               # CSS files
+│       │   ├── styles.css     # Custom styles
+│       ├── js/                # JavaScript files
+│       │   └── quiz.js        # Custom JS for quiz functionality
+│       └── images/            # Any images for your app
+│
+├── db.sqlite3                 # SQLite database (MySQL in production)
+├── .gitignore                 # Git ignore file (exclude sensitive data)
+└── requirements.txt           # Project dependencies (Django, MySQL client, Django REST Framework)
+
