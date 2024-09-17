@@ -1,6 +1,7 @@
 from django.urls import path
 from . import views
-
+from rest_framework.routers import DefaultRouter
+from .views import QuestionViewSet
 app_name = 'quiz'
 
 urlpatterns = [
@@ -8,9 +9,6 @@ urlpatterns = [
     path('submit/', views.submit_quiz, name='submit_quiz'),
     path('result/<int:score>/', views.quiz_result, name='result'),
 ]
-
-from rest_framework.routers import DefaultRouter
-from .views import QuestionViewSet
 
 router = DefaultRouter()
 router.register(r'api/questions', QuestionViewSet)
